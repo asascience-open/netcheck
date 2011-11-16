@@ -22,6 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.email = "wilcox.kyle@gmail.com"
   gem.authors = ["Kyle Wilcox"]
   gem.version = Netcheck::Version::FULL
+  gem.files = Dir.glob('lib/**/*.rb')	
 
   # Dependencies
   gem.add_dependency 'net-ssh'
