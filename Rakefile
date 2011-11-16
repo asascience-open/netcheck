@@ -12,6 +12,7 @@ end
 require 'rake'
 
 require 'jeweler'
+require './lib/netcheck/version.rb'
 Jeweler::Tasks.new do |gem|
   gem.name = "netcheck"
   gem.homepage = "http://github.com/kwilcox/netcheck"
@@ -20,6 +21,10 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{A library to check the status of http/ftp/ssh}
   gem.email = "wilcox.kyle@gmail.com"
   gem.authors = ["Kyle Wilcox"]
+  gem.version = Netcheck::Version::FULL
+
+  # Dependencies
+  gem.add_dependency 'net-ssh'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
