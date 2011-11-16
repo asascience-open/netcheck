@@ -2,8 +2,10 @@ require 'net/ssh'
 
 module Netcheck
   class SSH
-    def initialize(server,user,pass)
-      puts "SSH"   
+    attr_accessor :user, :pass, :server
+  
+    def initialize(&block)
+      yield(self) if block_given?
     end
   end
 end
